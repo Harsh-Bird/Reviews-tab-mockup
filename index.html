@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <script src="https://kit.fontawesome.com/14feb7fd1e.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+    </style>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <p id="totalReviews"></p>
+            <p style="margin-left: 20px;" id="averageRating"></p>
+        </div>
+        <select id="sort" onchange="sortBy(this.value)">
+            <option value="recent">Recent Reviews</option>
+            <option value="oldest">Oldest Reviews</option>
+            <option value="lowRated">Lowest Rating</option>
+            <option value="highRated">Highest Rating</option>
+            <option value="location">Location A-Z</option>
+        </select>
+    </header>
+    <hr>
+    <div id="demo"></div>
+    
+
+    <div id="modal" class="modal hidden">
+        <div class="container">
+            <div class="body">
+                <h3 id="modalTitle"></h3>
+                <div id="modalContent"></div>
+                <div id="modalButtons">
+                    <button id="modalCancel">Cancel</button>
+                    <button id="modalUpdate">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/index.js"></script>
+
+</html>
